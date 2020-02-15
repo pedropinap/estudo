@@ -5,10 +5,45 @@ body {
   background-color: #222228;
 }
 
-.botao {
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "botao1 botao2"
+    "botao3 botao4";
+  align-items: center;
+  justify-items: center;
+}
+
+.botao  {
+  grid-area: botao1;
   background-color: #222228;
   width: 10vw;
   height: 5vh;
   color: #ffffff;
-  border: 1px solid #2f5a1f;
+  border: 1px solid #fff;
+}
+
+.botao:nth-child(1)  {
+  grid-area: botao1;
+}
+
+.botao:nth-child(2)  {
+  grid-area: botao2;
+}
+
+.botao:nth-child(3)  {
+  grid-area: botao3;
+}
+
+.botao:nth-child(4)  {
+  grid-area: botao4;
+}
+
+.botao:hover {
+  background-color: #fff;
+  width: 5vw;
+  border: 0px
 }
